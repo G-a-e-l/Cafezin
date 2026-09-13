@@ -18,8 +18,7 @@ body{
 header{
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background-color: rgba(255, 255, 255, 0.150);
-    backdrop-filter: blur(12px);
+    background-color: var(--cor-marrom-medio);
     font-size:var(--fonte-normal);
     color: var(--cor-background-bege);
     padding: var(--espacamento-pequeno);
@@ -53,6 +52,11 @@ header a{
 a{
     text-decoration: none;
     color: var(--cor-background-bege);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .containerInformacoes ul{
     width: 100%;

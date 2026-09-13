@@ -1,0 +1,162 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    
+}
+.body{
+    background-image: url(../img/telaLogin/Login.svg);
+    width:100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.formLoginContainer{
+    height: fit-content;
+    min-width: 70%;
+    width: fit-content;
+    min-height: 80%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr repeat(6, 1fr);
+    margin: auto;
+
+}
+.esquecerSenha{
+    color: var(--cor-marrom-escuro-2);
+}
+.inptLoginEmail{
+    height: 70%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formText{
+    height: 100%;
+    width: 100%;
+    border: solid 2px var(--cor-marrom-escuro-2);
+    padding: var(--espacamento-medio);
+    border-radius: var(--borda-arredondada-media);
+    
+}
+.titulo{
+    font-family: 'Brasika',sans-serif;
+    color: var(--cor-marrom-escuro-2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fonte-titulo-grande);
+}
+.formLoginContainer>*{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hr{
+    height: 3px;
+    width: 80%;
+    margin: auto;
+    border-radius: 50px;
+    background-color: var(--cor-marrom-principal);
+    opacity: 1;
+}
+.botao{
+    min-height: 70%;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-laranja-escuro);
+    border: none;
+    border-radius: 20px;
+}
+.icons{
+    position: absolute;
+    width: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iconeEsq{
+    left: 10px;
+}
+.iconeDir{
+    right: 10px;
+}
+
+.botaoEntrar{
+    color: #121244;
+    background-color: #9dcbe1;
+    transition: var(--transicao-lenta);
+}
+.botaoEntrar:hover{
+    background-color:#788cba ;
+}
+.cadastrarContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-style: italic;
+    color: var(--cor-marrom-medio);
+}
+.cadastrar{
+    color: var(--cor-marrom-claro);
+}
+.erroLoginContainer{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.264);
+    top: 10px;
+    transition: all 0.5s;
+    animation-fill-mode: forwards;
+    z-index: 1000;
+}
+.errorLoginText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.errorLoginText h4{
+    font-family: 'Brasika', sans-serif;
+}
+.errorLoginText p{
+    width: 60%;
+    align-self: center;
+}
+.iconeErro{
+    width: 100px;
+}
+.erroLoginContainer::after{
+    content: "";
+    background-color: var(--cor-marrom-medio);
+    width: 100%;
+    position: absolute;
+    right: 0;
+    height: 5px;
+    bottom: 0;
+    border-radius: 20px;
+    animation: timingToRight ease-out 4s;
+}
+
